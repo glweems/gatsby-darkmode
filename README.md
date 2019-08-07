@@ -17,9 +17,9 @@ tags:
 ![thumbnail](tbn.png)
 
 <p align="center">
-  <a href="https://gatsby-darkmode.now.sh">Demo</a>
+  <a href="https://codesandbox.io/s/github/glweems/gatsby-darkmode/tree/master/?fontsize=14">Demo</a>
   ·
-  <a href="https://github.com/gwtuts/gatsby-darkmode">GitHub Repo</a>
+  <a href="https://github.com/glweems/gatsby-darkmode">GitHub Repo</a>
 </p>
 
 ---
@@ -117,7 +117,7 @@ in the src/components/ create a new file named **ToggleThemeButton.js**
 
 this is going to be a basic functional component that will allow us to connect to our state a trigger our reducer when we click the button
 
-```js
+```javascript
 // components/ToggleThemeButton.js
 import React from "react"
 import { connect } from "react-redux"
@@ -146,13 +146,13 @@ create a new file in your src/ directory called theme
 
 first start by creating an object of shared styles such as font, accent colors, font weight, anything you like.
 
-```js
+```javascript
 const sameStyles = { font: "Roboto", accent: "blue" }
 ```
 
 now create your light and dark objects, they must have the same keys but different values for this for work
 
-```js
+```javascript
 export const light = { fg: "black", bg: "white", ...sameStyles }
 
 export const dark = { fg: "white", bg: "black", ...sameStyles }
@@ -162,7 +162,7 @@ export const dark = { fg: "white", bg: "black", ...sameStyles }
 
 now in the same file we are going to create our HOC component
 
-```js
+```javascript
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
@@ -177,7 +177,7 @@ connecting everything together!
 ok we're almost there
 open up layout.js component and import everything from our theme
 
-```js
+```javascript
 import { GlobalStyle, light, dark } from "../theme"
 import { ThemeProvider } from "styled-components"
 import { connect } from "react-redux"
@@ -203,4 +203,6 @@ And there you have it!
 
 a fully functional dark-mode site using gatsby, redux, and styles-components
 
-[gatsby-darkmode-example](embedded-codesandbox://./)
+[![Edit gatsby-darkmode](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/glweems/gatsby-darkmode/tree/master/?fontsize=14)
+
+<iframe src="https://codesandbox.io/embed/github/glweems/gatsby-darkmode/tree/master/?fontsize=14" title="gatsby-darkmode" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
