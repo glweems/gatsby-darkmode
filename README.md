@@ -1,9 +1,11 @@
 ---
 path: gatsby-darkmode
-date: 2019-04-16
+date: 04/16/2019
 title: Gatsby Darkmode
-subtitle: create a dynamic dark-mode theme in gatsby using redux, and styled components
-thumbnail: "tbn.png"
+subtitle: Create a dynamic dark-mode theme in gatsby using redux, and styled components
+thumbnail: tbn.png
+repo: https://github.com/glweems/gatsby-darkmode
+codesandbox: github/glweems/gatsby-darkmode
 tags:
   - gatsby
   - redux
@@ -16,12 +18,6 @@ tags:
 ## create a dynamic dark-mode theme in gatsby using redux, and styled components
 
 ![thumbnail](tbn.png)
-
-<p align="center">
-  <a href="https://codesandbox.io/s/github/glweems/gatsby-darkmode/tree/master/?fontsize=14">Demo</a>
-  ·
-  <a href="https://github.com/glweems/gatsby-darkmode">GitHub Repo</a>
-</p>
 
 ---
 
@@ -52,7 +48,8 @@ src/
     └── ReduxWrapper.js
 ```
 
-Step 2.
+### Step 2.
+
 Create redux reducer
 
 ```javascript
@@ -79,7 +76,8 @@ const theme = (state = initialState, action) => {
 export default combineReducers({ theme })
 ```
 
-Step 3.
+### Step 3.
+
 create redux action to toggle current theme
 
 ```javascript
@@ -88,7 +86,9 @@ export const TOGGLE_THEME = `TOGGLE_THEME`
 export const toggleTheme = () => ({ type: TOGGLE_THEME })
 ```
 
-Step 4. Create our Provider / ReduxWrapper Component
+### Step 4. 
+
+Create our Provider / ReduxWrapper Component
 Now we are able to go ahead a create the ReduxWrapper component
 
 ```javascript
@@ -111,7 +111,8 @@ now that we have our ReduxWrapper component created, open up the ~gatsby-browser
 export { default as wrapRootElement } from "./src/state/ReduxWrapper"
 ```
 
-Step 5.
+### Step 5.
+
 Create our ToggleTheme button component
 
 in the src/components/ create a new file named **ToggleThemeButton.js**
@@ -140,7 +141,8 @@ export default connect(
 )(ToggleThemeButton)
 ```
 
-Step 6.
+### Step 6.
+
 making our redux state change our theme with styled-components
 
 create a new file in your src/ directory called theme
@@ -173,7 +175,8 @@ html,body {
 }`
 ```
 
-Step 7.
+### Step 7.
+
 connecting everything together!
 ok we're almost there
 open up layout.js component and import everything from our theme
@@ -204,6 +207,4 @@ And there you have it!
 
 a fully functional dark-mode site using gatsby, redux, and styles-components
 
-[![Edit gatsby-darkmode](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/glweems/gatsby-darkmode/tree/master/?fontsize=14)
-
-<iframe src="https://codesandbox.io/embed/github/glweems/gatsby-darkmode/tree/master/?fontsize=14" title="gatsby-darkmode" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+`--glweems`
