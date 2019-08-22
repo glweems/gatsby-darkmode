@@ -1,7 +1,8 @@
 ---
 path: gatsby-darkmode
 date: 2019-04-16
-title: Gatsby Dark-Mode
+title: Gatsby Darkmode
+subtitle: create a dynamic dark-mode theme in gatsby using redux, and styled components
 thumbnail: "tbn.png"
 tags:
   - gatsby
