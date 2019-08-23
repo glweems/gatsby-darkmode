@@ -5,7 +5,7 @@ title: Gatsby Darkmode
 subtitle: Create a dynamic dark-mode theme in gatsby using redux, and styled components
 thumbnail: tbn.png
 repo: https://github.com/glweems/gatsby-darkmode
-codesandbox: github/glweems/gatsby-darkmode
+codesandbox: gatsby-darkmode-b7iil
 tags:
   - gatsby
   - redux
