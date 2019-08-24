@@ -20,13 +20,13 @@ tags:
 
 In your Gatsby project run
 
-```sh
+```shell
 npm install --save react-redux redux styled-components
 ```
 
 Or
 
-```sh
+```shell
 yarn add redux react-redux styled-components
 ```
 
@@ -106,7 +106,7 @@ now that we have our ReduxWrapper component created, open up the ~gatsby-browser
 export { default as wrapRootElement } from "./src/state/ReduxWrapper"
 ```
 
-### Step 5.
+### Step 5
 
 Create our ToggleTheme button component
 
@@ -136,7 +136,7 @@ export default connect(
 )(ToggleThemeButton)
 ```
 
-### Step 6.
+### Step 6
 
 making our redux state change our theme with styled-components
 
@@ -170,7 +170,7 @@ html,body {
 }`
 ```
 
-### Step 7.
+### Step 7
 
 connecting everything together!
 ok we're almost there
@@ -202,4 +202,3 @@ And there you have it!
 
 a fully functional dark-mode site using gatsby, redux, and styles-components
 
-`--glweems`
