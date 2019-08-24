@@ -4,35 +4,33 @@ date: 04/16/2019
 title: Gatsby Darkmode
 subtitle: Create a dynamic dark-mode theme in gatsby using redux, and styled components
 thumbnail: tbn.png
-repo: https://github.com/glweems/gatsby-darkmode
-codesandbox: gatsby-darkmode-b7iil
-git:
+codesandbox:
   - github
   - glweems
   - gatsby-darkmode
-  - master
 tags:
   - gatsby
   - redux
-  - styles-components
+  - styled-components
   - react
+  - darkmode
 ---
 
 ### Getting Starting
 
 In your Gatsby project run
 
-```
+```sh
 npm install --save react-redux redux styled-components
 ```
 
 Or
 
-```
+```sh
 yarn add redux react-redux styled-components
 ```
 
-### Step 1.
+### Step 1
 
 Create a new folder in your src/ directory called _state_
 Within this folder create the following files
@@ -45,7 +43,7 @@ src/
     └── ReduxWrapper.js
 ```
 
-### Step 2.
+### Step 2
 
 Create redux reducer
 
@@ -73,7 +71,7 @@ const theme = (state = initialState, action) => {
 export default combineReducers({ theme })
 ```
 
-### Step 3.
+### Step 3
 
 create redux action to toggle current theme
 
@@ -83,7 +81,7 @@ export const TOGGLE_THEME = `TOGGLE_THEME`
 export const toggleTheme = () => ({ type: TOGGLE_THEME })
 ```
 
-### Step 4.
+### Step 4
 
 Create our Provider / ReduxWrapper Component
 Now we are able to go ahead a create the ReduxWrapper component
